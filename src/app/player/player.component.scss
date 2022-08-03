@@ -1,0 +1,19 @@
+.player {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    background-color: cornflowerblue;
+    border-radius: 10px 0 0 10px;
+   
+    span {
+        font-size: 26px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 10px;
+    }
+
+    .profile-picture {
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
+    }
+}
