@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DialogAddPlayerComponent } from './dialog-add-player/dialog-add-player.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
+    MatInputModule,
     FormsModule,
     MatDialogModule,
     BrowserAnimationsModule
