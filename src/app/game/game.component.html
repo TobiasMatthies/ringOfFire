@@ -9,12 +9,12 @@
 
         <img *ngFor="let card of game.playedCards" class="played-card" src="assets/img/{{ card }}.png">
 
-        <img (click)="takeCard()" *ngIf="pickCardAnimation" [class.pick-card]="pickCardAnimation"
-            class="pickCardAnimation" style="right: 20px" src="assets/img/{{ currentCard }}.png">
+        <img (click)="takeCard()" *ngIf="this.game.pickCardAnimation" [class.pick-card]="this.game.pickCardAnimation"
+            class="pickCardAnimation" style="right: 20px" src="assets/img/{{ this.game.currentCard }}.png">
     </div>
 </div>
 
-<app-game-info [card]="currentCard"></app-game-info>
+<app-game-info [card]="this.game.currentCard"></app-game-info>
 
 <button (click)="openDialog()" mat-fab color="primary" class="add-btn">
     <mat-icon>add</mat-icon>
