@@ -3,4 +3,11 @@ mat-card {
     left: 100px;
     right: 100px;
     bottom: 32px;
+
+    @media(max-width: 800px) {
+        min-height: 120px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
 }

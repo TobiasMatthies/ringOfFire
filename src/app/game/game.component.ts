@@ -61,18 +61,20 @@ export class GameComponent implements OnInit {
 
 
   takeCard() {
-    if (!this.game.pickCardAnimation) {
-      this.game.currentCard = this.game.stack.pop();
-      this.game.pickCardAnimation = true;
-      this.game.currentPlayer++;
-      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
-      this.updateGame();
-
-      setTimeout(() => {
-        this.game.pickCardAnimation = false;
-        this.game.playedCards.push(this.game.currentCard);
+    if (this.game.players.length > 1) {
+      if (!this.game.pickCardAnimation) {
+        this.game.currentCard = this.game.stack.pop();
+        this.game.pickCardAnimation = true;
+        this.game.currentPlayer++;
+        this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
         this.updateGame();
-      }, 1000);
+
+        setTimeout(() => {
+          this.game.pickCardAnimation = false;
+          this.game.playedCards.push(this.game.currentCard);
+          this.updateGame();
+        }, 1000);
+      }
     }
   }
 
